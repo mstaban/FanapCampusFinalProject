@@ -3,7 +3,7 @@ import org.example.exeptions.*;
 
 public class BankAccount {
     private String accountNumber;
-    private double balance;
+    protected double balance;
     private String accountHolderName;
 
 
