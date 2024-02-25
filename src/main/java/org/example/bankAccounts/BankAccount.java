@@ -1,4 +1,5 @@
-package org.example;
+package org.example.bankAccounts;
+import org.example.exeptions.*;
 
 public class BankAccount {
     private String accountNumber;
@@ -13,7 +14,7 @@ public class BankAccount {
             balance += amount;
     }
 
-    public void withdraw (double amount){
+    public void withdraw (double amount) throws InsufficientFundsException {
         if (amount > balance)
             throw new InsufficientFundsException("insufficient balance ");
         else if (amount < 0)
