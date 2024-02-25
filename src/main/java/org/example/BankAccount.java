@@ -1,4 +1,4 @@
-package bank;
+package org.example;
 
 import java.util.Optional;
 
@@ -22,6 +22,11 @@ public class BankAccount {
     public BankAccount(String accountNumber, String accountHolderName) {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
-        Optional.ofNullable(this.balance);
+    }
+
+    public BankAccount(String accountNumber, String accountHolderName, double balance) {
+        this.accountNumber = accountNumber;
+        this.accountHolderName = accountHolderName;
+        this.balance = balance;
     }
 }
