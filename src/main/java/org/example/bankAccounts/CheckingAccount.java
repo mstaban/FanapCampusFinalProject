@@ -25,10 +25,18 @@ public class CheckingAccount extends BankAccount{
             throw new InsufficientFundsException("not valid amount ");
         else
             balance -= amount;
+
+        deductFees(amount);
     }
 
-    public void deductFees() {
+    @Override
+    public void deposit(double amount) {
+        super.deposit(amount);
+        deductFees(amount);
+    }
 
+    public void deductFees(double amount) {
+        balance -= ((amount * 5) / 100);
     }
 
 }
