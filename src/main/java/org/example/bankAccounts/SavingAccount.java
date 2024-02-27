@@ -22,7 +22,6 @@ public class SavingAccount extends BankAccount {
         super(accountNumber, accountHolderName);
         this.interestRate = interestRate;
         runApplyInterest();
-
     }
 
     public void applyInterest (){

@@ -1,10 +1,12 @@
 package org.example.bankAccounts;
 import org.example.exeptions.*;
 
-public class BankAccount {
-    private String accountNumber;
+import java.io.Serializable;
+
+public class BankAccount implements Serializable {
+    private final String accountNumber;
     protected double balance;
-    private String accountHolderName;
+    private final String accountHolderName;
 
 
     public void deposit (double amount){
@@ -49,4 +51,5 @@ public class BankAccount {
     public String getAccountHolderName() {
         return accountHolderName;
     }
+
 }
